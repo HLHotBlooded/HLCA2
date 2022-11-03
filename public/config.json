@@ -8,8 +8,8 @@
     "type": "REST",
     "lang": {
         "en-US": {
-            "name": "<NAME_HERE>",
-            "description": "<DESCRIPTION_HERE>",
+            "name": "HLCA2",
+            "description": "Main Test",
             "step1Label": "Configure Activity"
         }
     },
@@ -21,7 +21,7 @@
                 { "message": "" }
             ],
             "outArguments": [],
-            "url": "https://<HOST_HERE>.com/journeybuilder/execute",
+            "url": "https://hlca2.herokuapp.com/journeybuilder/execute",
             "verb": "POST",
             "body": "",
             "header": "",
@@ -31,24 +31,24 @@
         }
     },
     "configurationArguments": {
-        "applicationExtensionKey": "<APPLICATION_EXTENSION_KEY_HERE>",
+        "applicationExtensionKey": "c23d4b75-fd8a-4913-b75e-b6b5830640be",
         "save": {
-            "url": "https://<HOST_HERE>.com/journeybuilder/save",
+            "url": "https://hlca2.herokuapp.com/journeybuilder/save",
             "verb": "POST",
             "useJwt": true
         },
         "publish": {
-            "url": "https://<HOST_HERE>/journeybuilder/publish",
+            "url": "https://hlca2.herokuapp.com/journeybuilder/publish",
             "verb": "POST",
             "useJwt": true
         },
         "stop": {
-            "url": "https://<HOST_HERE>/journeybuilder/stop",
+            "url": "https://hlca2.herokuapp.com/journeybuilder/stop",
             "verb": "POST",
             "useJwt": true
         },
         "validate": {
-            "url": "https://<HOST_HERE>/journeybuilder/validate",
+            "url": "https://hlca2.herokuapp.com/journeybuilder/validate",
             "verb": "POST",
             "useJwt": true
         }
