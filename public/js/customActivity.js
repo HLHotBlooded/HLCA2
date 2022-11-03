@@ -29,7 +29,7 @@ define(['postmonger'], function (Postmonger) {
     connection.on('requestedTriggerEventDefinition', function (eventDefinitionModel) {
         if (eventDefinitionModel) {
             eventDefinitionKey = eventDefinitionModel.eventDefinitionKey;
-            // console.log('Request Trigger >>>', JSON.stringify(eventDefinitionModel));
+             console.log('Request Trigger >>>', JSON.stringify(eventDefinitionModel));
         }
     });
 
@@ -104,6 +104,7 @@ define(['postmonger'], function (Postmonger) {
         connection.trigger('requestSchema');
         connection.on('requestedSchema', function (data) {
             // save schema
+            console.log('*** Schema ***', JSON.stringify(data['schema']));
             let dataJson = data['schema'];
 
             for (let i = 0; i < dataJson.length; i++) {
