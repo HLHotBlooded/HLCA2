@@ -16,9 +16,15 @@
     "arguments": {
         "execute": {
             "inArguments": [
-                { "subscriberKey": "" },
-                { "phoneNumber": "" },
-                { "message": "" }
+                 {
+                    "ContcatKey": "{{Contact.Key}}"
+                  },
+                   {
+                    "FirstName": "{{Contact.Attribute.MyCustomers.FirstName}}"
+                  }, 
+                  {
+                    "LastName": "{{Contact.Attribute.MyCustomers.LastName}}"
+                  }
             ],
             "outArguments": [],
             "url": "https://hlca2.herokuapp.com/journeybuilder/execute",
@@ -65,17 +71,17 @@
             "execute": {
                 "inArguments": [
                     {
-                        "phoneNumber": {
+                        "ContcatKey": {
                             "dataType": "Phone",
                             "isNullable": false,
                             "direction": "in"
                         },
-                        "subscriberKey": {
+                        "FirstName": {
                             "dataType": "Text",
                             "isNullable": false,
                             "direction": "in"
                         },
-                        "message": {
+                        "LastName": {
                             "dataType": "Text",
                             "isNullable": false,
                             "direction": "in"

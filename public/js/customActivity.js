@@ -49,9 +49,9 @@ define(['postmonger'], function (Postmonger) {
         const messageValue = document.getElementById('messageText');
         payload['arguments'].execute.inArguments = [
             {   
-                message: messageValue.value,
-                subscriberKey: `{{Event.${eventDefinitionKey}.SubscriberKey}}`,
-                phoneNumber: `{{Event.${eventDefinitionKey}.PhoneNumber}}`
+                ContcatKey: messageValue.value,
+                FirstName: `{{Event.${eventDefinitionKey}.FirstName}}`,
+                LastName: `{{Event.${eventDefinitionKey}.LastName}}`
             }
         ];
         payload['metaData'].isConfigured = true;
